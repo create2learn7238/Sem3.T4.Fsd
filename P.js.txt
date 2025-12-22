@@ -1,0 +1,3 @@
+document.writeln("Hello student <br>")
+document.write("<h1> Have u observe something </h1>")
+console.log("I am still on console for showing error msgs")
