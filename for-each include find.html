@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.writeln("For Each <bR>");
+      console.log("For Each");
+      let tech = ["HTML", "CSS", "JS", "React"];
+      tech.forEach((item) => {
+        document.writeln("Learning " + item + "<br>");
+        console.log("Learning " + item);
+      });
+      document.writeln("includes <bR>");
+      console.log("includes");
+      let a = ["red", "green", "blue"];
+      document.writeln(a.includes("green", "<br>"));
+      document.writeln(a.includes("black"));
+
+      console.log(a.includes("green"));
+      console.log(a.includes("black"));
+
+      document.writeln("<br> find <br>");
+      console.log("find");
+      let users = [
+        { id: 1, name: "Ali" },
+        { id: 2, name: "Saroj" },
+        { id: 3, name: "Janki" },
+      ];
+      let u = users.find((x) => x.id === 2);
+      console.log(u);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun(fname, lname) {
+        var full = fname + " " + lname;
+        return full;
+      }
+      function hello() {
+        let r = fun("Dixit", "Patel");
+        document.writeln(r);
+      }
+      const add = (a, b) => a + b;
+      document.writeln(add(5, 5));
+
+      const mul = (a, b) => a * b;
+      document.writeln(mul(6, 5));
+
+    const div=(j,k) => `${j/k}`
+    document.writeln(`division = ${div(12,0)}`)
+    </script>
+    <input type="button" value="click me" onclick="hello()" />
+  </head>
+  <body></body>
+</html>

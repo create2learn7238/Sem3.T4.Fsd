@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Huge Rainbow Text</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rainbow: linear-gradient(
+        90deg,
+        #ff0000 0%,
+        #ff7a00 16%,
+        #ffd400 33%,
+        #00d95f 50%,
+        #00a3ff 66%,
+        #7a00ff 83%,
+        #ff00c8 100%
+      );
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0f1220;
+      color: #fff;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    }
+
+    .rainbow-wrap {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .rainbow-text {
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      /* Responsive clamp: min 48px, preferred 12vw, max 180px */
+      font-size: clamp(3rem, 12vw, 11.25rem);
+      background: var(--rainbow);
+      background-size: 200% auto; /* for animation */
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      animation: slide 8s linear infinite;
+      margin: 0;
+    }
+
+    .sub {
+      margin-top: 1rem;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: #cfd3ff;
+      opacity: 0.9;
+    }
+
+    /* Optional glow for extra pop */
+    .glow {
+      filter: drop-shadow(0 60px 240px rgba(255, 255, 255, 0.08))
+              drop-shadow(0 2px 8px rgba(255, 255, 255, 0.12));
+    }
+
+    /* Animated gradient movement */
+    @keyframes slide {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rainbow-wrap">
+    <h1 class="rainbow-text glow">RAINBOW</h1>
+    <p class="sub">Huge gradient text—bold, responsive, and animated.</p>
+  </div>
+</body>
+</html>

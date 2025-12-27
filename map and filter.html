@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      document.writeln("Map() root <br> ");
+      let a = [4, 9, 16, 25, 3, 2];
+      let roots = a.map((n) => Math.sqrt(n));
+      document.write(roots + "<br> Filter() >5 <br>");
+
+      let a1 = [1, 8, 5, 2, 9, 6, 3, 1, 0];
+      let a2 = a1.filter((n) => n > 5);
+      document.write(a2);
+    </script>
+  </head>
+  <body></body>
+</html>

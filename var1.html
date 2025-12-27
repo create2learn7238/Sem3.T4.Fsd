@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script>
-      var a = 10;
-      function fun() {
-        var b = 20;
-        console.log(a, b);
-      }
-      fun();
-      console.log(a);
-      console.log(ud);
-      var ud = 10000;
-    </script>
-  </head>
-  <body>
-    <h1>Hiiiii</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Wheel</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .wheel {
+      width: 200px;
+      height: 200px;
+      animation: spin 5s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SVG Wheel -->
+  <svg class="wheel" viewBox="0 0 200 200">
+    <!-- Outer circle -->
+    <circle cx="100" cy="100" r="90" stroke="black" stroke-width="4" fill="lightgray"/>
+
+    <!-- Spokes -->
+    <line x1="100" y1="10"  x2="100" y2="190" stroke="black" stroke-width="2"/>
+    <line x1="10"  y1="100" x2="190" y2="100" stroke="black" stroke-width="2"/>
+    <line x1="30"  y1="30"  x2="170" y2="170" stroke="black" stroke-width="2"/>
+    <line x1="170" y1="30"  x2="30"  y2="170" stroke="black" stroke-width="2"/>
+
+    <!-- Center hub -->
+    <circle cx="100" cy="100" r="10" fill="black"/>
+  </svg>
+
+</body>
 </html>
