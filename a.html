@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+const students = [
+  { name: "test", FSD: "" },
+  { name: "nisha", FSD:""  },   // invalid
+  { name: "megha", FSD:"" }
+];
+    function gradeStudents(students) {
+  let summary = "";
+  for (let student of students) {
+    let marks = prompt(`Enter FSD marks for ${student.name}:`);
+
+    // validation
+    if (marks === "" || isNaN(marks)) {
+      alert("Invalid grade. Please enter a number.");
+      continue;
+    }
+//     // update FSD marks
+    student.FSD = Number(marks);
+    // build summary WITHOUT +=
+    summary = summary + `${student.name}: ${student.FSD}\n`;
+  }
+  alert(`FSD Marks Summary:\n${summary}`);
+}
+gradeStudents(students);
+</script>
+Displaying Task 2.html.
+</head>
+<body>
+    
+</body>
+</html>
