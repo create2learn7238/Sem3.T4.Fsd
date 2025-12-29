@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun(a, b, ...c) {
+        console.log(a);
+        console.log(b);
+        console.log(...c);
+      }
+
+      fun(1, 2, 3, 4, 5, 6, 7);
+      const arr = [1, 2, 3];
+      const arr1 = [100, 200, 300];
+      const newarr = [arr, arr1];
+      const newarr1 = [...arr, ...arr1];
+      console.log(newarr);
+      console.log(newarr1);
+      console.log(...newarr1);
+      console.log(Math.min(newarr1));
+      console.log(Math.min(...newarr1));
+
+      function fun1(a, b, ...c) {
+        console.log(`${a} ${b}`);
+        console.log(c);
+        console.log(c[0]);
+        console.log(c.length);
+        console.log(c.indexOf("xyz"));
+        console.log(c.indexOf("aaaa"));
+      }
+      fun1("abc", "mno", "pqr", "car", "xyz");
+
+      function abc(a, b = 10) {
+        return a + b;
+      }
+      console.log(abc(2));
+      console.log(abc(2, 5));
+      console.log(abc(2, undefined));
+      console.log(abc("abc"));
+    </script>
+  </head>
+  <body></body>
+</html>

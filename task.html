@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun(bg, tx, s = "30px", st = "italic") {
+        i = document.getElementById("a");
+        i.style.color = tx;
+        i.style.backgroundColor = bg;
+        i.style.fontSize = s;
+        i.style.fontStyle = st;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="a">Dixit Patel</p>
+    <input type="button" value="submit" onclick="fun('black','red')" />
+  </body>
+</html>
