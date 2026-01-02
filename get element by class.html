@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="b">Hello</p>
+    <p class="b">Hiii</p>
+    <button type="button" onclick="fun2()">Click</button>
+    <script>
+      function fun2() {
+        let i = document.getElementsByClassName("b");
+        i[0].innerHTML = "aaa";
+        for (let p of i) {
+          p.innerHTML = "Y R U ???";
+          p.style.color = "red";
+          p.style.backgroundColor = "black";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img id="a" onclick="fun()" src="img1.png" alt="AAA" />
+    <script>
+      function fun() {
+        let i = document.getElementById("a");
+        if (i.getAttribute("src") === "img1.png") {
+          i.setAttribute("src", "img2.png");
+        } else {
+          i.setAttribute("src", "img1.png");
+        }
+      }
+    </script>
+  </body>
+</html>
