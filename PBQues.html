@@ -1,0 +1,47 @@
+<!-- 1. if mouse over heading it should turn yellow if mouse goes out it should turn
+black 2.if button named find time is click then shown date and time in formation
+3.if button named red is click bgcolor of body should turn red AND BUTTON NAMED
+GREEN IS CLICK THE BG COLOR SHOULD TURN GREEN -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="abc">
+    <h1
+      onmouseover="this.style.color='yellow'"
+      onmouseout="this.style.color='black'"
+    >
+      heading
+    </h1>
+    <p id="a"></p>
+    <button onclick="fun(this)">red</button>
+    <button onclick="fun2(this)">Green</button>
+    <button onclick="funft(this)">find time</button>
+    <script>
+      function fun(e) {
+        i = document.querySelector("#abc");
+        i.addEventListner("onclick", funa());
+        function funa() {
+          i.style.backgroundColor = "red";
+        }
+      }
+
+      function fun2(e) {
+        i = document.querySelector("#abc");
+        i.addEventListner("onclick", funb());
+        function funb() {
+          i.style.backgroundColor = "green";
+        }
+      }
+      function funft(e
+        
+      ) {
+        let d = new Date();
+        d.getElementById("a").innerHTML = d;
+      }
+    </script>
+  </body>
+</html>

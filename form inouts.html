@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>on Focus:</p>
+    <input type="text" onfocus="this.style.backgroundColor='yellow'" />
+    <p>on Input:</p>
+    <input type="text" oninput="this.value=this.value.toLowerCase()" />
+    <p>on change:</p>
+    <input type="text" onchange="this.value=this.value.toLowerCase()" />
+    <p>on Blur:</p>
+    <input type="text" onblur="this.style.color='blue'" />
+    <p>on Submit:</p>
+    <form action="#" onsubmit="fun()">
+      <input type="text" id="a" name="fname" />
+      <input type="text" name="lname" />
+      <input type="submit" value="Submit" />
+    </form>
+    <script>
+      function fun() {
+        let d = document.getElementById("a").value;
+        alert("Welcome " + d);
+      }
+    </script>
+  </body>
+</html>
