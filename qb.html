@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Name" id="a" />
+    <input type="number" placeholder="Price" id="b" />
+    <input type="text" placeholder="Discount" id="c" />
+    <button onclick="saveu()">Save</button>
+    <button onclick="removeu()">Remove</button>
+    <script>
+      function saveu() {
+        let n = document.getElementById("a").value;
+        localStorage.setItem("Name", n);
+
+        let p = document.getElementById("b").value;
+        localStorage.setItem("Price", p);
+
+        let d = document.getElementById("c").value;
+        localStorage.setItem("Discount", d);
+      }
+      function removeu() {
+        localStorage.removeItem("Discount");
+        let na = localStorage.getItem("Name");
+        let pr = localStorage.getItem("Price");
+        console.log(na + " " + pr);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Laakho" id="a" />
+    <button type="button" onclick="saveu()">Save</button>
+    <button type="button" onclick="showu()">show</button>
+    <button type="button" onclick="clearu()">clear</button>
+
+    <p id="demo"></p>
+    <script>
+      function saveu() {
+        let t = document.getElementById("a").value;
+        localStorage.setItem("user", t);
+        sessionStorage.setItem("user", t);
+      }
+      function showu() {
+        let a = localStorage.getItem("user");
+        let b = sessionStorage.getItem("user");
+        document.getElementById("demo").innerHTML =
+          "Local Storage : " + a + "<br> Session Storage : " + b;
+      }
+      function clearu() {
+        localStorage.clear();
+        sessionStorage.clear();
+      }
+    </script>
+  </body>
+</html>

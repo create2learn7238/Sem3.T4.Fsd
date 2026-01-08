@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Laakho" id="a" />
+    <button type="button" onclick="saveu()">Save</button>
+    <input type="text" placeholder="Password" id="d" />
+    <button type="button" onclick="admin()">Admin</button>
+    <button type="button" onclick="showu()">show</button>
+    <button type="button" onclick="clearu()">clear</button>
+
+    <p id="demo"></p>
+    <script>
+      function saveu() {
+        let t = document.getElementById("a").value;
+        let u = JSON.parse(localStorage.getItem("u")) || [];
+        u.push(t);
+        localStorage.setItem("u", JSON.stringify(u));
+      }
+      function showu() {
+        let u = JSON.parse(localStorage.getItem("u")) || [];
+        document.getElementById("demo").innerHTML =
+          "Users : <br> " + u.join("<br>");
+      }
+      function clearu() {
+        localStorage.clear();
+        sessionStorage.clear();
+      }
+    </script>
+  </body>
+</html>
