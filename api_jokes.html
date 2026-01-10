@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="fun()">Get Dog</button>
+    <img id="a" width="300px" height="300px"></img>
+
+    <script>
+      function fun() {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((res) => res.json())
+          .then((data) => {
+            let i = document.getElementById("a");
+            i.setAttribute("src", data.message);
+          })
+          .catch((e) => {
+            console.log(console.log("Error", e));
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -7,20 +7,22 @@
   </head>
   <body>
     <script>
+      
       const order = new Promise((resolve, reject) => {
         let success = true;
         setTimeout(() => {
           if (success) {
             resolve("Order Placed");
           } else {
-            resole("Order Cancel");
+            reject("Order Cancel");
           }
-        }, 20000);
+        }, 2000);
       });
-      order
+      d = order
         .then((result) => console.log("result"))
         .catch((error) => console.log("error"))
         .finally(() => console.log("Finished"));
+      console.log(d);
     </script>
   </body>
 </html>

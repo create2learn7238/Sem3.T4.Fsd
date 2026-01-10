@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function gd() {
+        return new Promise((resolve, reject) => {
+          let success = true;
+          setTimeout(() => {
+            if (success) {
+              resolve("Order Placed");
+            } else {
+              reject("Order Cancel");
+            }
+          }, 2000);
+          console.log("Processing...");
+        });
+      }
+      async function fd() {
+        console.log("Waiting");
+        try {
+          let result = await gd(); //imp always use in syn as await
+          console.log(result);
+        } catch (err) {
+          console.log("Error : ", err);
+        }
+      }
+      fd();
+    </script>
+  </body>
+</html>
